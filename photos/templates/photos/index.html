@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+<!-- 上傳圖片 區塊 -->
+{% block upload %}
+    <!-- 表單中包含「上傳的元件」，所以在<form>標籤的地方，要加上enctype="multipart/form-data" -->
+    <form action="" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <br />
+        <div class="form-row">
+            <div class="form-group col-md-4">
+            </div>
+            <div class="form-group col-md-4">
+                <input class="btn btn-primary" type="submit" value="上傳" />
+            </div>
+            <div class="form-group col-md-4">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+            </div>
+            <div class="form-group col-md-4">
+                {{ form.image }}        <!-- 「選擇檔案」圖示，「未選擇任何檔案」文字 -->
+            </div>
+            <div class="form-group col-md-4">
+            </div>
+        </div>
+    </form>
+{% endblock upload %}
+
+<!-- 顯示圖片 區塊 -->
+{% block content %}
+    <div class="row">
+        {% for photo in photos %}
+            <br />
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="{{ photo.image.url }}" />
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

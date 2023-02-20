@@ -1,0 +1,14 @@
+# virtualenv
+.venv/
+
+# AWS environment variables
+.env
+
+# Reference Images
+refImages/
+
+# Byte-compiled
+__pycache__/
+
+# Visual Studio Code
+.vscode/
