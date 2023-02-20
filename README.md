@@ -12,7 +12,7 @@
 
 ## About the project
 
-The django image wall website project uses the django framework and Python's Pillow image library to develop the function of uploading images.This project integrates Amazon S3 cloud service and stores uploaded image files in Amazon S3 buckets to improve data storage flexibility.
+The django image wall website uses the django framework and Python's Pillow image library to develop the function of uploading images.This project integrates Amazon S3 cloud service and stores uploaded image files in Amazon S3 buckets to improve data storage flexibility.
 
 ## Project Implementation and Deployment
 
